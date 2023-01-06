@@ -7,19 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Componente3Component implements OnInit {
     //crear el array de datos -> Almacena información
-datos = new Array;
+  datos = new Array;
 
-//los datos para el array
-tarea = "";
-txttarea = "";
+  //los datos para el array
+  tarea = "";
+  txttarea = "";
 
-//Metodo para añadir valores al Array
-AgregarTarea(){
-  this.datos.push({'Tarea': this.tarea, 'TxtTarea':this.txttarea});
-  console.log(this.datos);
-}
+  //Metodo para añadir valores al Array
+  AgregarTarea(){
+    this.datos.push({'Tarea': this.tarea, 'TxtTarea':this.txttarea});
+    console.log(this.datos);
+  }
 
-constructor() { }
+  constructor() { }
 
   ngOnInit(): void {
   }
