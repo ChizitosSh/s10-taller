@@ -19,4 +19,9 @@ AgregarTarea(){
   console.log(this.datos);
 }
 
+constructor() { }
+
+  ngOnInit(): void {
+  }
+
 }
