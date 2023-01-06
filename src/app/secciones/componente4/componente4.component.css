@@ -1,0 +1,17 @@
+th {
+    font-size: 15px; 
+    text-align: center;
+}
+
+td {
+    font-size: 18px;
+}
+
+th, td {
+    padding:  10px;
+}
+
+thead {
+    background-color: black; 
+    color:white
+}

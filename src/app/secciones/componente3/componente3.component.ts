@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { datos } from './tarea-list';
 
 @Component({
   selector: 'app-componente3',
@@ -7,31 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Componente3Component implements OnInit {
 
-datos = new Array;
+  datos: datos[] = []
 
-tarea = "";
-descripcion = "";
-resultado = false;
-mensaje = '';
+  tarea!: string;
+  descripcion!: string;
+  resultado: boolean = false;
+  mensaje!: string;
 
-AgregarTarea(){
-  if(this.tarea!='' &&this.descripcion!=''){
-    this.datos.push({'Tarea': this.tarea, 'Descripcion':this.descripcion});
-    this.tarea = "";
-    this.descripcion = "";
-    this.resultado = true;
-    this.mensaje="";
-  }else{
-    this.resultado = false;
-    this.mensaje="Ingresa los campos, para agregar a la lista";
- }
-}
-
-
-Eliminar(indice:number){
-  this.datos.splice(indice, 1)
+  AgregarTarea(){
+    if(this.tarea && this.descripcion) {
+      let agregarDatos: datos = {
+        tarea: this.tarea,
+        descripcion: this.descripcion,
+      }
+      this.datos.push(agregarDatos);
+      this.tarea = "";
+      this.descripcion = "";
+      this.resultado = true;
+      this.mensaje="";
+    } else {
+      this.resultado = false;
+      this.mensaje="Por favor, rellene los campos";
+    }
   }
-  
+
   constructor() { }
 
   ngOnInit(): void {

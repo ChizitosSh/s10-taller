@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { datos } from '../componente3/tarea-list';
 
 @Component({
   selector: 'app-componente4',
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./componente4.component.css']
 })
 export class Componente4Component implements OnInit {
+  @Input() datos: datos[] = [];
+
+  Eliminar(indice:number){
+    this.datos.splice(indice, 1)
+  }
 
   constructor() { }
 
