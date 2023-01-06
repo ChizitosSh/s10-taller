@@ -1,4 +1,4 @@
-<form action="">
+<!-- <form action="">
     <section class="container my-4">
         <input type="text" placeholder="Ingresa el nombre de la tarea" class="form-control my-4">
         <textarea type="text" placeholder="Ingresa descripción de la tarea" class="form-control my-4" rows="3"></textarea>
@@ -11,30 +11,33 @@
     <ul>
         <li>Prueba</li>
     </ul>
-</section>
+</section> -->
 
 
 <section class="container py-5 h-100">
-  <section class="row d-flex  align-items-center h-100">
-        <section class="col-6 col-md-8 col-lg-6 col-xl-5">
-          <section class="card shadow-2-strong" style="border-radius: 1rem">
-            <section class="card-body p-5 text-center">
-              <h3 class="mb-5">Ingresar</h3>
-              <section class="form-outline mb-4">
-                <input class="form-control form-control-lg" placeholder="Ingresa nombre tarea" type="text" [(ngModel)]="tarea"/>
-              </section>
-              <section class="form-outline mb-4">
-                <textarea class="form-control form-control-lg" placeholder="Ingresa Descripción" type="text" rows="3" [(ngModel)]="txttarea"></textarea>
-              </section>
-              <section class="pt-1 mb-4">
-                <input class="btn btn-primary btn-lg" type="button" value="Guardar" (click)="AgregarTarea()"/>
-              </section>
+    <section class="row d-flex  align-items-center h-100">
+            <section class="col-6 col-md-8 col-lg-6 col-xl-5">
+            <section class="card shadow-2-strong" style="border-radius: 1rem">
+                <section class="card-body p-5 text-center">
+                <h3 class="mb-5">Ingresar</h3>
+                <section class="form-outline mb-4">
+                    <input class="form-control form-control-lg" placeholder="Ingresa nombre tarea" type="text" [(ngModel)]="tarea"/>
+                </section>
+                <section class="form-outline mb-4">
+                    <textarea class="form-control form-control-lg" placeholder="Ingresa Descripción" type="text" rows="3" [(ngModel)]="txttarea"></textarea>
+                </section>
+                <section class="pt-1 mb-4">
+                    <input class="btn btn-primary btn-lg" type="button" value="Guardar" (click)="AgregarTarea()"/>
+                </section>
 
-              <ul *ngFor="let lista of datos">
-                <li>{{ lista.Tarea }}</li>
-              </ul>
+                <ul *ngFor="let lista of datos">
+                    <li>{{ lista.Tarea }}</li>
+                        <ul>
+                            <li>{{lista.TxtTarea}}</li>
+                        </ul>
+                </ul>
+            </section>
         </section>
-      </section>
+        </section>
     </section>
-  </section>
-  </section>
+</section>
