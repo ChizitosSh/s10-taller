@@ -1,29 +1,21 @@
+.activo {
+    background-color: black; 
+    color:white;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 18px;
+    padding: 10px 30px 10px 30px;
+    cursor: pointer;
+}
 
-th{
-  font-size: 15px; 
-  text-align: center;
-  }
-  
-  td{
-  font-size: 18px;
-  }
-  
-  th, td{
-  padding:  10px;
-  }
-  
-  thead{
-      background-color: black; 
-      color:white
-  }
-  
-  .button{
-      background-color: black; 
-      color:white;
-      border: 1px solid black;
-      border-radius: 5px;
-      margin-top: 15px;
-      font-size: 18px;
-      padding: 10px 30px 10px 30px;
-      cursor: pointer;
-  }
+.inactivo {
+    background-color: rgb(172, 172, 172);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 18px;
+    padding: 10px 30px 10px 30px;
+    cursor: default;
+}
