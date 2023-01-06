@@ -6,18 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./componente3.component.css']
 })
 export class Componente3Component implements OnInit {
-    //crear el array de datos -> Almacena información
-  datos = new Array;
+datos = new Array;
 
-  //los datos para el array
-  tarea = "";
-  txttarea = "";
+tarea = "";
+descripcion = "";
 
-  //Metodo para añadir valores al Array
-  AgregarTarea(){
-    this.datos.push({'Tarea': this.tarea, 'TxtTarea':this.txttarea});
-    console.log(this.datos);
-  }
+AgregarTarea(){
+  this.datos.push({'Tarea': this.tarea, 'Descripcion':this.descripcion});
+  console.log(this.datos);
+}
 
   constructor() { }
 
