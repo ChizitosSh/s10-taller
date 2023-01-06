@@ -6,22 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./componente3.component.css']
 })
 export class Componente3Component implements OnInit {
-  datos = new Array;
+    //crear el array de datos -> Almacena información
+datos = new Array;
 
-  nombre = '';
-  apellido = '';
+//los datos para el array
+tarea = "";
+txttarea = "";
 
-  Agregar(){
-    if(this.nombre!=''){
-      this.datos.push({'Nombre': this.nombre, 'Apellidos': this.apellido})
-    } else {
-      console.log('Debe ingresar un nombre');
-    }
-  }
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+//Metodo para añadir valores al Array
+AgregarTarea(){
+  this.datos.push({'Tarea': this.tarea, 'TxtTarea':this.txttarea});
+  console.log(this.datos);
+}
 
 }
