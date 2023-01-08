@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { datos } from './tarea-list';
+import { tareaStorage } from './tarea-storage';
 
 @Component({
   selector: 'app-componente3',
@@ -7,6 +8,7 @@ import { datos } from './tarea-list';
   styleUrls: ['./componente3.component.css']
 })
 export class Componente3Component implements OnInit {
+  constructor(private tareaStorage: tareaStorage) {}
 
   datos: datos[] = []
 
@@ -17,11 +19,9 @@ export class Componente3Component implements OnInit {
 
   AgregarTarea(){
     if(this.tarea && this.descripcion) {
-      let agregarDatos: datos = {
-        tarea: this.tarea,
-        descripcion: this.descripcion,
-      }
-      this.datos.push(agregarDatos);
+      let datosAgregados = new datos (this.tarea, this.descripcion)
+      this.datos.push(datosAgregados);
+      this.tareaStorage.setTareaStorage(this.datos);
       this.tarea = "";
       this.descripcion = "";
       this.resultado = true;
@@ -32,9 +32,12 @@ export class Componente3Component implements OnInit {
     }
   }
 
-  constructor() { }
+  getTareaStorage() {
+    this.datos = this.tareaStorage.getTareaStorage();
+  }
 
   ngOnInit(): void {
+    this.getTareaStorage();
   }
 
 }

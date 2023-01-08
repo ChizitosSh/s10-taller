@@ -11,12 +11,13 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let fila of datos; let i = index">
+                <tr *ngFor="let fila of datos; let i = index" [ngClass]="fila.terminado ? 'tachado' : ''">
                     <td>{{ i + 1 }}</td>
                     <td>{{ fila.tarea }}</td>
                     <td>{{ fila.descripcion }}</td>
                     <td>
-                        <button class="btn btn-danger" value="{{ 1 }}" (click)="Eliminar(i)">X</button>
+                        <i class="bi bi-trash-fill" (click)="Eliminar(i)"></i>
+                        <i class="bi bi-check-circle-fill" (click)="Terminado(i)"></i>
                     </td>
                 </tr>
             </tbody>
