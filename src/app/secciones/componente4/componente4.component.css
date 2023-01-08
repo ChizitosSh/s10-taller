@@ -15,3 +15,7 @@ thead {
     background-color: black; 
     color:white
 }
+
+.tachado {
+    text-decoration: line-through;
+}
