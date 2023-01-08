@@ -22,7 +22,6 @@ export class Componente3Component implements OnInit {
       let datosAgregados = new datos (this.tarea, this.descripcion)
       this.datos.push(datosAgregados);
       this.tareaStorage.setTareaStorage(this.datos);
-      // this.obtenerTareas();
       this.tarea = "";
       this.descripcion = "";
       this.resultado = true;

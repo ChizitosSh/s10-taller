@@ -13,7 +13,8 @@ export class Componente4Component implements OnInit {
   @Input() datos: datos[] = [];
 
   Terminado(indice:number){
-    console.log(this.datos[indice].tarea)
+    this.datos[indice].terminado = true;
+    this.tareaStorage.setTareaStorage(this.datos);
   }
 
   Eliminar(indice:number){

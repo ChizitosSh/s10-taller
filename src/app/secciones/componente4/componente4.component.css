@@ -16,6 +16,19 @@ thead {
     color:white
 }
 
+i {
+    cursor: pointer;
+}
+
+i:first-child {
+    margin-right: 10px;
+    color: red;
+}
+
+i:last-child {
+    color: #28a745;
+}
+
 .tachado {
     text-decoration: line-through;
 }
